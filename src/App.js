@@ -11,7 +11,7 @@ function ToDoList() {
   });
 
   useEffect(() => {
-    setTaskList(JSON.parse(localStorage.getItem("lista")));
+    setTaskList(JSON.parse(localStorage.getItem("lista")) || []);
   }, []);
 
   const handleInsert = (description) => {
